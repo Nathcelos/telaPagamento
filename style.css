@@ -1,0 +1,111 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Caixa principal do formulário de pagamento */
+#container {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Textos dos campos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de texto e listas */
+input:not([type="radio"]),
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Opções de pagamento */
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Deixar as opções de pagamento lado a lado */
+label[for="pix"],
+label[for="cartao"] {
+    display: inline;
+    margin-right: 15px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Esconde os painéis de pagamento inicialmente */
+#painel-pix,
+#painel-cartao {
+    display: none;
+}
+
+/* Alinha o campo e a imagem do cartão na mesma linha */
+.campo-cartao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Campo do número do cartão */
+.campo-cartao input {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 12px;
+}
+
+/* Imagem da bandeira do cartão */
+#imagem-cartao {
+    width: 55px;
+    height: 35px;
+    object-fit: contain;
+    display: none;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+}
+
+/* Estilo da mensagem de erro do cartão */
+#mensagem-cartao {
+    color: red;
+    font-size: 14px;
+    margin-top: 0;
+}
